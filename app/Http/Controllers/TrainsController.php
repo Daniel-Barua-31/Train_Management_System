@@ -29,5 +29,15 @@ class TrainsController extends Controller
         $trains->Trains_Destination= $request['Trains_Destination'];
         $trains->Time= $request['Time'];
         $trains->save();
+        return redirect('trains/view');
+    }
+    public function view(){
+        $trains=Trains::all();
+        $data=compact('trains');
+        return view('trains_view')->with($data);
+    }
+    public function delete($id){
+        $trains=Trains::find($id)->delete();
+        return redirect()-> back();
     }
 }

@@ -23,6 +23,8 @@ Route::get('/register',[RegistrationController::class, 'index']);
 Route::post('/register',[RegistrationController::class, 'register']);
 Route::get('/trains',[TrainsController::class, 'index']);
 Route::post('/trains',[TrainsController::class, 'store']);
+Route::get('/trains/view',[TrainsController::class, 'view']);
+Route::get('/trains/delete/{id}',[TrainsController::class, 'delete'])->name('trains.delete');
 Route::get('/Admin_registration', function () {
     return view('Admin_registration');
 });

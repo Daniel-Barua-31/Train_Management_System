@@ -10,26 +10,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-  <form action="{{url('/')}}/trains" method="post">
+    <h2 class="text-center text-success">Trains Registration form</h2>
+  <form action="{{url('/')}}/trains" class="m-2 p-3 border border-primary" method="post" >
   @csrf
   <div class="container">
-<div class="form-group">
+<div class="mb-3 form-group">
 <label for="trains_name">Trains_name</label>
 <input type="text" class="form-control" name ="trains_name" id="trains_name" placeholder="Enter the trains_name">
 </div>
-<div class="form-group">
+<div class="mb-3 form-group">
 <label for="Available_seats">Available_seats</label>
 <input type="number" class="form-control" name ="Available_seats" id="Available_seats" placeholder="Enter the Available_seats">
 </div>
-<div class="form-group">
+<div class="mb-3 form-group">
 <label for="Trains_leaving">Trains_leaving</label>
 <input type="text" class="form-control" name ="Trains_leaving" id="Trains_leaving" placeholder="Enter the Trains_leaving">
 </div>
-<div class="form-group">
+<div class="mb-3 form-group">
 <label for="Trains_Destination">Trains_Destination</label>
 <input type="text" class="form-control" name ="Trains_Destination" id="Trains_Destination" placeholder="Enter the Trains_Destination">
 </div>
-<div class="form-group">
+<div class="mb-3 form-group">
 <label for="Time">Time</label>
 <input type="datetime-local" class="form-control" name ="Time" id="Time" >
 </div>
