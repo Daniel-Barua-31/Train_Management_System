@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Models\Passenger;
+use App\Http\Controllers\TrainsController;
+use App\Models\Trains;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +21,8 @@ Route::get('/', function () {
 });
 Route::get('/register',[RegistrationController::class, 'index']);
 Route::post('/register',[RegistrationController::class, 'register']);
+Route::get('/trains',[TrainsController::class, 'index']);
+Route::post('/trains',[TrainsController::class, 'store']);
 Route::get('/Admin_registration', function () {
     return view('Admin_registration');
 });
