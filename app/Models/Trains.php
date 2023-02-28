@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trains extends Model
 {
+    use HasFactory;
     protected $table = "trains";
     protected $primaryKey = "Trains_id";
 }

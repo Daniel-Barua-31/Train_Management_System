@@ -13,14 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_stations', function (Blueprint $table) {
-            $table->string('Stations_id',50)->primary();
-            $table->string('Stations_name',50);
-            $table->string('Trains_id');
-            $table->date('Date');
-            $table->string('City');
-            $table->timestamps();
-        });
+        schema::drop('password_resets');
     }
 
     /**
@@ -30,6 +23,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_stations');
+        //
     }
 };

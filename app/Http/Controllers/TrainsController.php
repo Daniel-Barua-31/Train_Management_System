@@ -62,13 +62,13 @@ class TrainsController extends Controller
         }
     }
     public function update($id, Request $request){
-        $trains= Trains::find($id);
+        $trains = Trains::find($id);
         $trains-> Trains_name = $request['trains_name'];
         $trains-> Available_seats= $request['Available_seats'];
         $trains-> Trains_leaving= $request['Trains_leaving'];
-        $trains->Trains_Destination= $request['Trains_Destination'];
-        $trains->Time= $request['Time'];
-        $trains->save();
+        $trains-> Trains_Destination= $request['Trains_Destination'];
+        $trains-> Time= $request['Time'];
+        $trains-> save();
         return redirect('trains');
     }
 }

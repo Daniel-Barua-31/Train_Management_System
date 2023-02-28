@@ -16,23 +16,23 @@
   <div class="container">
 <div class="mb-3 form-group">
 <label for="trains_name">Trains_name</label>
-<input type="text" class="form-control" name ="trains_name" id="trains_name" value="{{$trains->Trains_name}}" placeholder="Enter the trains_name">
+<input type="text" class="form-control" name ="trains_name" id="trains_name" value="{{old('trains_name')}}" placeholder="Enter the trains_name" />
 </div>
 <div class="mb-3 form-group">
 <label for="Available_seats">Available_seats</label>
-<input type="number" class="form-control" name ="Available_seats" id="Available_seats"  value="{{$trains->Available_seats}}" placeholder="Enter the Available_seats">
+<input type="number" class="form-control" name ="Available_seats" id="Available_seats"  value="{{old('Available_seats')}}" placeholder="Enter the Available_seats" />
 </div>
 <div class="mb-3 form-group">
 <label for="Trains_leaving">Trains_leaving</label>
-<input type="text" class="form-control" name ="Trains_leaving" id="Trains_leaving" value="{{$trains->Trains_leaving}}" placeholder="Enter the Trains_leaving">
+<input type="text" class="form-control" name ="Trains_leaving" id="Trains_leaving" value="{{old('Trains_leaving')}}" placeholder="Enter the Trains_leaving">
 </div>
 <div class="mb-3 form-group">
 <label for="Trains_Destination">Trains_Destination</label>
-<input type="text" class="form-control" name ="Trains_Destination" id="Trains_Destination" value="{{$trains->Trains_Destination}}" placeholder="Enter the Trains_Destination">
+<input type="text" class="form-control" name ="Trains_Destination" id="Trains_Destination" value="{{old('Trains_Destination')}}" placeholder="Enter the Trains_Destination">
 </div>
 <div class="mb-3 form-group">
 <label for="Time">Time</label>
-<input type="datetime-local" class="form-control" name ="Time" id="Time" value="{{$trains->Time}}">
+<input type="datetime-local" class="form-control" name ="Time" id="Time" value="{{old('Time')}}">
 </div>
 <button type="submit" class="btn btn-primary">Submit</button>
   </div>
