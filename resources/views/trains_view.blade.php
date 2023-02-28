@@ -32,10 +32,10 @@
                     <td class="table-primary">{{$train->Trains_Destination}}</td>
                     <td class="table-primary">{{$train->Time}}</td>
                     <td class="table-primary">
-                        <a href="{{url('trains/delete')}}/{{$train->Trains_id}}">
+                        <a href="{{route('trains.delete',['id' => $train->Trains_id])}}">
                         <button type="button" class="btn btn-danger">Delete</button>
                         </a>
-                        <a href="#">
+                        <a href="{{route('trains.edit',['id' => $train->Trains_id])}}">
                         <button type="button" class="btn btn-primary">Edit</button>
                         </a>
                     </td>

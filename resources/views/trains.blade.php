@@ -10,29 +10,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <h2 class="text-center text-success">Trains Registration form</h2>
-  <form action="{{url('/')}}/trains" class="m-2 p-3 border border-primary" method="post" >
+    <h2 class="text-center text-success">{{$title}}</h2>
+  <form action="{{$url}}" class="m-2 p-3 border border-primary" method="post" >
   @csrf
   <div class="container">
 <div class="mb-3 form-group">
 <label for="trains_name">Trains_name</label>
-<input type="text" class="form-control" name ="trains_name" id="trains_name" placeholder="Enter the trains_name">
+<input type="text" class="form-control" name ="trains_name" id="trains_name" value="{{$trains->Trains_name}}" placeholder="Enter the trains_name">
 </div>
 <div class="mb-3 form-group">
 <label for="Available_seats">Available_seats</label>
-<input type="number" class="form-control" name ="Available_seats" id="Available_seats" placeholder="Enter the Available_seats">
+<input type="number" class="form-control" name ="Available_seats" id="Available_seats"  value="{{$trains->Available_seats}}" placeholder="Enter the Available_seats">
 </div>
 <div class="mb-3 form-group">
 <label for="Trains_leaving">Trains_leaving</label>
-<input type="text" class="form-control" name ="Trains_leaving" id="Trains_leaving" placeholder="Enter the Trains_leaving">
+<input type="text" class="form-control" name ="Trains_leaving" id="Trains_leaving" value="{{$trains->Trains_leaving}}" placeholder="Enter the Trains_leaving">
 </div>
 <div class="mb-3 form-group">
 <label for="Trains_Destination">Trains_Destination</label>
-<input type="text" class="form-control" name ="Trains_Destination" id="Trains_Destination" placeholder="Enter the Trains_Destination">
+<input type="text" class="form-control" name ="Trains_Destination" id="Trains_Destination" value="{{$trains->Trains_Destination}}" placeholder="Enter the Trains_Destination">
 </div>
 <div class="mb-3 form-group">
 <label for="Time">Time</label>
-<input type="datetime-local" class="form-control" name ="Time" id="Time" >
+<input type="datetime-local" class="form-control" name ="Time" id="Time" value="{{$trains->Time}}">
 </div>
 <button type="submit" class="btn btn-primary">Submit</button>
   </div>
