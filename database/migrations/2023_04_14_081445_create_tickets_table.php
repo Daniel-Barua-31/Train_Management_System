@@ -13,14 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ticket', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->bigIncrements('Ticket_id');
             $table->unsignedBigInteger('Passenger_id');
             $table->foreign('Passenger_id')->references('Passenger_id')->on('passenger');
-            $table->string('Trains_id');
+            $table->unsignedBigInteger('Trains_id');
+            $table->foreign('Trains_id')->references('Trains_id')->on('trains');
             $table->string('Seat_number',120)->unique();
-            $table->enum('Seat_class',['First class AC(FC)','Second class AC(SC)','Sleeper (SL)','SHOVAN','SNIGDHA']);
-            $table->Integer('Ticket_price');
+            $table->integer('pricing');
+            $table->integer('amount');
+            $table->unsignedBigInteger('Stations_id');
+            $table->foreign('Stations_id')->references('Stations_id')->on('station');
             $table->date('Booking_date');
             $table->timestamps();
         });
@@ -33,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::drop('ticket');
+        Schema::dropIfExists('tickets');
     }
 };

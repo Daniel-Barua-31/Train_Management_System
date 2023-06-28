@@ -10,6 +10,10 @@ class RegistrationController extends Controller
     public function index(){
         return view('registration');
     }
+    public function login()
+    {
+        return view('Admin_login');
+    }
     public function register(Request $request){
         $request->validate(
             [

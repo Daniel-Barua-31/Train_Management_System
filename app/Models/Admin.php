@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Passenger extends Model
+class Admin extends Model
 {
-    protected $table = "passenger";
-    protected $primaryKey = 'Passenger_id';
+    use HasFactory;
+
+    protected $table = 'admin';
+
     protected $fillable = [
-        'Passenger_name',
+        'Admin_name',
         'Password',
         'email',
         'gender',
         'Address',
-        'image'
     ];
 }
